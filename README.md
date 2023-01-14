@@ -41,6 +41,10 @@ Droidian is a GNU/Linux distribution based on top of Mobian, a Debian-based dist
 * Reboot
 * Go to Setteings->Mobile Network and toggle Mobile data
 
+## Full Disk Encrytpion
+* FDE is supported but read this first https://github.com/droidian/droidian-encryption-service <br />
+Also you cannot change the password for encryption after you set it up.
+
 ## Bugs and workarounds
 * There is no Camera app right now. But thanks to @erikinkinen by porting the qt5 backend https://github.com/droidian/qt5-cameraplugin-aal it is possible to access the camera with qt5 on phosh. As a workaround you can use this little app https://github.com/arpio23/quickpic <br />
 Just run:
