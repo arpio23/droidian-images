@@ -42,7 +42,12 @@ Droidian is a GNU/Linux distribution based on top of Mobian, a Debian-based dist
 * Go to Setteings->Mobile Network and toggle Mobile data
 
 ## Bugs and workarounds
-* Camera not working, is a common issue on droidian. Some devices have camera working with waydroid. But does not work on sofia.
+* There is no Camera app right now. But thanks to @erikinkinen by porting the qt5 backend https://github.com/droidian/qt5-cameraplugin-aal it is possible to access the camera with qt5 on phosh. As a workaround you can use this little app https://github.com/arpio23/quickpic <br />
+Just run:
+      <pre><code>sudo apt update
+      sudo apt install quickpic
+      </code></pre>
+On droidian itself camera has only limited functionality. Just use waydroid if required.
 * Screen to dark: <br />
    I patched the gnome-settings-daemon https://github.com/arpio23/gnome-settings-daemon <br />
    It is preinstalled but not activated <br />
