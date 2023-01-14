@@ -1,7 +1,9 @@
 Droidian on Moto G Power (sofia)
 ========
 
-Droidian is a GNU/Linux distribution based on top of Mobian, a Debian-based distribution for mobile devices. The goal of Droidian is to be able to run Mobian on Android phones.
+Droidian is a GNU/Linux distribution based on top of Mobian, a Debian-based distribution for mobile devices. The goal of Droidian is to be able to run Mobian on Android phones.<br />
+
+<img src="https://deb.arpio.ca/droidian0.png" width="200" height="400"/> <img src="https://deb.arpio.ca/droidian1.png" width="200" height="400"/> <img src="https://deb.arpio.ca/droidian2.png" width="200" height="400"/> <img src="https://deb.arpio.ca/droidian3.png" width="200" height="400"/> <img src="https://deb.arpio.ca/droidian4.png" width="200" height="400"/>
 
 ## THE INSTRUCTIONS BELLOW WILL WIPE ALL THE DATA ON YOUR DEVICE
 
