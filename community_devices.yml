@@ -6,7 +6,7 @@ motorola_sofia:
   arch: arm64
   edition: phosh
   variant: phone
-  apilevel: 29
+  apilevel: [29, 30]
   use_internal_repository: false
 
   packages:
