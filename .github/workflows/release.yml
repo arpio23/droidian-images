@@ -2,7 +2,6 @@ name: droidian rootfs-builder
 
 on:
   workflow_dispatch:
-  push:
   schedule:
     - cron: "0 7 * * 6"
 
