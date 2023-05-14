@@ -22,7 +22,7 @@ Droidian is a GNU/Linux distribution based on top of Mobian, a Debian-based dist
  * Make sure you can boot both slots a & b
 
 ## Installation
- * Use only API29 zip files with android10 vendor. API30 is for android11 vendor and is not tested.
+ * Use only API29 zip files with android10 vendor.
  * Download the latest build here: https://github.com/arpio23/droidian-images/releases
  * Unpack the zip file
  * Boot to fastbootd:
