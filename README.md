@@ -13,8 +13,15 @@ Droidian is a GNU/Linux distribution based on top of Mobian, a Debian-based dist
 
 # Default password: 1234
 
+## You have stock Android10
+ * Continue in the Prepare section
+
+## You have stock Android11
+ * You need to download the official Android10 firmware for example from here: https://mirrors.lolinet.com/firmware/motorola/sofia/official/
+ * You need to extract the vendor image from the official firmware.
+
 ## Prepare
- * You need unlocked bootloader and Android 10 on your phone with stock vendor partitions.
+ * You need unlocked bootloader.
  * Go to Settings->About phone and tap the Build number 7 times
  * Got to Settings->System->Advanced->Developer options and activate USB debugging
  * Backup all your data, the installation steps will wipe everything in the userdata partition.
@@ -22,11 +29,16 @@ Droidian is a GNU/Linux distribution based on top of Mobian, a Debian-based dist
  * Make sure you can boot both slots a & b
 
 ## Installation
- * Use only API29 zip files with android10 vendor.
  * Download the latest build here: https://github.com/arpio23/droidian-images/releases
  * Unpack the zip file
  * Boot to fastbootd:
    <pre><code>adb reboot fastboot</code></pre>
+ 
+ * ANDROID11 BASE SYSTEM ONLY:
+   Flash the previously extracted vendor image from official Android10 firmware.
+   <pre><code>fastboot flash vendor path/to/vendor.img</code></pre>
+   DO NOT REBOOT
+   
  * Using fastboot flash following partitions:
     <pre><code>fastboot flash boot data/boot.img
    fastboot flash userdata data/userdata.img</code></pre>
@@ -34,7 +46,7 @@ Droidian is a GNU/Linux distribution based on top of Mobian, a Debian-based dist
  * If you have a Moto G Power (sofia) and the instructions did not work, create an issue: https://github.com/arpio23/droidian-images/issues
  * Find the solution here: https://t.me/DroidianLinux
 
-## Mobile Data set up
+## Mobile Data set up on PHOSH
  * You successfuly booted Droidian
  * Go to Setteings->Mobile Network and activate Mobile data
       Add the Acces Point for your provider
@@ -47,27 +59,5 @@ Droidian is a GNU/Linux distribution based on top of Mobian, a Debian-based dist
 * Reboot
 * Go to Setteings->Mobile Network and toggle Mobile data
 
-## Full Disk Encrytpion
-* FDE is supported but read this first https://github.com/droidian/droidian-encryption-service <br />
-Also you cannot change the password for encryption after you set it up.
-
-## Bugs and workarounds
-* There is no Camera app right now. But thanks to @erikinkinen by porting the qt5 backend https://github.com/droidian/qt5-cameraplugin-aal it is possible to access the camera with qt5 on phosh. As a workaround you can use this little app https://github.com/arpio23/quickpic <br />
-Just run:
-      <pre><code>sudo apt update
-      sudo apt install quickpic
-      </code></pre>
-On droidian itself camera has only limited functionality. Just use waydroid if required.
-* Screen to dark: <br />
-   I patched the gnome-settings-daemon https://github.com/arpio23/gnome-settings-daemon <br />
-   It is preinstalled but not activated <br />
-   Run this in terminal: <br />
-   <pre><code>gsettings set org.droidian.settings-daemon.power auto-brightness-linear true</code></pre>
-* Mobile data not working after calls or after dropping to 3g and back to 4g: <br />
-   Toggle Mobile Data: Settings->Mobile Network
-   
-* Camera notch: <br />
-   Patched phosh https://github.com/arpio23/phosh/tree/bookworm is preinstalled<br />
-   <pre><code>gsettings set sm.puri.phosh top-panel-offset 64
-  wget https://deb.arpio.ca/gtk.css</code></pre>
-   Place this file in to .config/gtk-3.0/ and reboot
+## Mobile Data set up on CUTIE
+* Just set your apn in the settings app
